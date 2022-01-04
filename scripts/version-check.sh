@@ -28,11 +28,11 @@ diff -v | head -n1
 
 gcc -v 2>&1 < /dev/null | head -n1
 
-echo "int main(){}" > dummy.cpp && g++ -o dummy dummy.cpp
+echo "int main(){}" > dummy.cpp && gcc -o dummy dummy.cpp
 if [ -x dummy ];then
 	echo "g++ compilation ok"
 else
 	echo "g++ compilation failed"
 fi
 
-rm -rf dummy dummy.cpp
+rm -rf dummy

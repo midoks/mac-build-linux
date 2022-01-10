@@ -19,7 +19,7 @@ if [ ! -d $DIR/sources/linux-${LINUX_VER} ];then
 fi
 
 
-cat <<EOT >> /usr/local/include/elf.h
+cat <<EOT > /usr/local/include/elf.h
 #include "gelf.h"
 #define R_386_NONE 0
 #define R_386_32 1

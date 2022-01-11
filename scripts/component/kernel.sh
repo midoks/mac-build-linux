@@ -8,6 +8,9 @@ export LFS=$DIR/linux/lfs
 export LFS_TGT=$(uname -m)-apple-darwin20
 export LFS_TGT_LINUX=$(uname -m)-pc-linux-gnu
 
+if [ ! -d /usr/local/Cellar/libelf ];then
+	brew install libelf
+fi
 
 LINUX_VER=5.15.12
 if [ ! -f $DIR/sources/linux-${LINUX_VER}.tar.xz ];then
@@ -20,7 +23,7 @@ fi
 
 
 cat <<EOT > /usr/local/include/elf.h
-#include "gelf.h"
+#include "libelf/gelf.h"
 #define R_386_NONE 0
 #define R_386_32 1
 #define R_386_PC32 2

@@ -25,17 +25,13 @@ cd $DIR/sources
 #--------- gcc end ------------------
 
 #--------- binutils start ------------------
-# sh $DIR/scripts/component/binutils.sh
+bash $DIR/scripts/component/binutils.sh
 #--------- binutils start ------------------
 
 
 
-if [ ! -d /usr/local/Cellar/libelf ];then
-	brew install libelf
-fi
-
 #--------- linux start ------------------
-sh $DIR/scripts/component/kernel.sh
+# sh $DIR/scripts/component/kernel.sh
 #--------- linux end ------------------
 
 
